@@ -8,7 +8,7 @@ load_dotenv()
 
 # Retrieve API key and model from environment variables
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL = os.getenv("MODEL")
+MODEL = os.getenv("CREW_MODEL")
 
 @CrewBase
 class Demo():
