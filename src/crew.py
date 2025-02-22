@@ -3,13 +3,6 @@ from crewai.project import CrewBase, agent, crew, task
 from dotenv import load_dotenv
 import os
 
-# Load environment variables from a .env file
-load_dotenv()
-
-# Retrieve API key and model from environment variables
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL = os.getenv("CREW_MODEL")
-
 @CrewBase
 class Demo():
 	"""Demo crew"""
@@ -58,6 +51,4 @@ class Demo():
 			tasks=self.tasks,  # Automatically created by the @task decorator
 			process=Process.sequential,
 			verbose=True,
-			api_key=GROQ_API_KEY,
-			model=MODEL
 		)

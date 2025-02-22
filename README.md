@@ -1,9 +1,4 @@
-# Project Name
-
-## Description
-A brief description of your project.
-
-## Installation
+## Setting Up the Project
 
 ### Create a Virtual Environment
 ```bash
@@ -25,13 +20,29 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## Running the Streamlit App
+### Create a .env File
+Create a `.env` file in the root directory of your project and add the following variables:
+```
+MODEL=your_model_name
+GROQ_API_KEY=your_groq_api_key
+GROQ_MODEL=your_groq_model
+```
+
+## Testing Groq Agent
+
+### Start the Groq Agent
+```bash
+python groq/agent.py
+```
+
+### Start the Groq WebSocket
+```bash
+python groq/ws.py
+```
+
+## Testing the Streamlit App
+
+### Run the Streamlit App
 ```bash
 streamlit run app/app.py
 ```
-
-## License
-Include your project's license information here.
-
-## Contact
-Provide your contact information here.

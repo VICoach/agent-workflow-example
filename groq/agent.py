@@ -11,7 +11,6 @@ load_dotenv()
 # Initialize Groq client
 client = groq.Client(api_key=os.getenv("GROQ_API_KEY"))
 
-# System prompt for the technical interviewer
 # Technical Interviewer Agent System Prompt
 system_prompt = """
 You are a technical interviewer specializing in software engineering and algorithmic problem-solving. 
@@ -27,7 +26,7 @@ Your job is to conduct a coding interview as follows:
 You must be **structured, professional, and engaging**, encouraging the user to think critically. Keep responses concise but informative.
 """
 
-async def handle_connection(websocket, path=None):  # Make path optional
+async def handle_connection(websocket, path=None):  
     # Send a welcome message
     await websocket.send("Welcome to the technical interview! Let's begin.")
 
@@ -60,7 +59,7 @@ async def start_server():
         ping_interval=3600,  
         ping_timeout=3600):
         print("WebSocket server started on ws://localhost:8765")
-        await asyncio.Future()  # Run forever
+        await asyncio.Future()  
 
 # Run the server
 asyncio.run(start_server())
